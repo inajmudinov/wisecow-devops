@@ -1,0 +1,7 @@
+.git
+.github
+k8s
+*.zip
+*.key
+*.crt
+response
