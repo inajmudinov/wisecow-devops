@@ -1,7 +1,7 @@
 # Wisecow: Docker, Kubernetes, CI/CD and TLS
 
 ## Assignment and scope
-All three screenshots describe one project. This solution includes application source, Dockerfile, Deployment, Service, TLS Ingress and GitHub Actions build/push/deploy workflow.
+This project demonstrates containerization, Kubernetes deployment, automated CI/CD, and TLS-secured access for the Wisecow application. This solution includes application source, Dockerfile, Deployment, Service, TLS Ingress and GitHub Actions build/push/deploy workflow.
 The screenshots say both private and public repository; the upstream README also requests private access for nyrahul. Confirm the final visibility and reviewer with the recruiter. Do not publish credentials.
 
 Source: https://github.com/nyrahul/wisecow at commit 32b220c9deecb46d621f6c849599d838b39ad488.
