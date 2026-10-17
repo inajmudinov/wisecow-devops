@@ -88,4 +88,23 @@ Troubleshooting: ImagePullBackOff usually means image name/tag or registry crede
 Rollback: `kubectl -n wisecow rollout undo deployment/wisecow` followed by rollout status. Local cleanup: `k3d cluster delete wisecow` (deletes this demo cluster).
 
 ## Validation status
-Bash syntax and YAML parsing were checked during preparation. Docker, kubectl and a Kubernetes cluster were unavailable in the preparation environment, so container execution, registry publication, Actions and TLS deployment remain to be verified by running the steps above. No repository or live deployment was created on your account.
+
+Successfully validated on Windows with Ubuntu WSL2 and Docker:
+
+- Docker image built and application tested in terminal and browser.
+- Two-node k3d Kubernetes cluster created.
+- Two application replicas running with a ClusterIP Service.
+- HTTPS tested through Traefik using a self-signed certificate,
+  with certificate verification enabled through curl --cacert.
+- GitHub Actions built, tested and published the image to GHCR.
+- The deployment job successfully deployed the published image by digest.
+- HTTPS was tested successfully again after automated deployment.
+
+Successful workflow:
+https://github.com/inajmudinov/wisecow-devops/actions/runs/39073308137
+
+Deployment requires the laptop, Docker and self-hosted runner to be running.
+KUBE_CONFIG uses a temporary service-account token requested for 24 hours;
+renew it after expiry. Renew the registry pull token before its expiry.
+TLS terminates at Traefik; traffic from Traefik to the application is HTTP.
+The application is available locally, not hosted on a public internet endpoint.
