@@ -2,9 +2,9 @@
 
 ## Assignment and scope
 This project demonstrates containerization, Kubernetes deployment, automated CI/CD, and TLS-secured access for the Wisecow application. This solution includes application source, Dockerfile, Deployment, Service, TLS Ingress and GitHub Actions build/push/deploy workflow.
-The screenshots say both private and public repository; the upstream README also requests private access for nyrahul. Confirm the final visibility and reviewer with the recruiter. Do not publish credentials.
 
-Based on the [Wisecow application](https://github.com/nyrahul/wisecow), this project adds containerization, Kubernetes deployment, TLS, and CI/CD automation.
+
+This project adds containerization, Kubernetes deployment, TLS, and CI/CD automation.
 
 ## 1. Prerequisites
 Use a Linux/macOS computer or Windows WSL2 with Docker running. Install git, kubectl, k3d, curl and OpenSSL. Check their official installation pages:
